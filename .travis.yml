@@ -1,0 +1,8 @@
+language: haskell
+
+ghc:
+  - "8.2.1"
+
+install: ghc -O2 -threaded --make main.hs -o reproduce
+
+script: ./check_output.sh
